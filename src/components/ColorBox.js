@@ -9,7 +9,7 @@ export default class ColorBox extends React.Component {
 		return (
 			<div
 				style={{backgroundColor: c, 
-					border: "3px solid black",
+					border: "2px solid black",
 					height: "50px", 
 					width: "50px"}}>
 			</div>
