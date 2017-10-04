@@ -6,7 +6,7 @@ export default class Slider extends React.Component {
 	handleChange(e) {
 		const newHue = e.target.value;
 		//console.log(newHue);
-		this.props.changeHue(newHue);
+		this.props.changeValue(newHue);
 	}
 
 	render() {
