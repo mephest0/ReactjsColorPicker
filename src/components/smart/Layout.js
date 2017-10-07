@@ -1,12 +1,11 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
+import { connect } from 'react-redux'
 
-import Slider from './Slider';
-import ColorBox from './ColorBox';
-import SavedColor from './SavedColor';
-import SavedColors from './SavedColors';
+import Slider from '../dumb/Slider'
+import ColorBox from '../dumb/ColorBox'
+import SavedColors from './SavedColors'
 
-import { addSavedColor, changeHue } from '../js/actions'
+import { addSavedColor, changeHue } from '../../js/actions'
 
 @connect((store) => {
 	return {

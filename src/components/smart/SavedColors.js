@@ -1,8 +1,8 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
+import { connect } from 'react-redux'
 
-import SavedColor from './SavedColor';
-import { changeHue } from '../js/actions';
+import SavedColor from '../dumb/SavedColor'
+import { changeHue } from '../../js/actions'
 
 @connect(store => {
 	return {
@@ -25,6 +25,6 @@ export default class SavedColors extends React.Component {
 			<div>
 				{mappedColors}
 			</div>
-		)
+		);
 	}
 }

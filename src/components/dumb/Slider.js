@@ -1,11 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-import Shower from './Shower';
+import Shower from './Shower'
 
 export default class Slider extends React.Component {
 	handleChange(e) {
 		const newHue = e.target.value;
-		//console.log(newHue);
 		this.props.changeValue(newHue);
 	}
 

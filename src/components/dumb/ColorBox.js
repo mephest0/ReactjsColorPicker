@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 var Color = require('color');
 
@@ -14,6 +14,6 @@ export default class ColorBox extends React.Component {
 					height: "50px", 
 					width: "50px"}}>
 			</div>
-		)
+		);
 	}
 }
