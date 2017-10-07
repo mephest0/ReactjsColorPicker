@@ -6,4 +6,4 @@ A simple app, and my first in React. Drag the slider to change the hue of the co
 Written in React with Redux.
 
 ### Running
-To run in dev server, run 'npm start'. To build, run 'npm run-script build'.
+To run in dev server, run `npm start`. To build, run `npm run-script build`.
