@@ -1,5 +1,15 @@
 import { combineReducers } from "redux"
 
+const lightReducer = (state = 50, action) => {
+	switch (action.type) {
+		case "CHANGE_LIGHT":
+			return action.data;
+		
+		default:
+			return state;
+	}
+}
+
 const hueReducer = (state=0, action) => {
 	switch (action.type) {
 		case "CHANGE_HUE": 
@@ -24,6 +34,7 @@ const colorsReducer = (state=getDefaultColors(), action) => {
 }
 
 export default combineReducers({
+	light: lightReducer,
 	hue: hueReducer,
 	colors: colorsReducer
 });

@@ -5,17 +5,22 @@ import Slider from '../dumb/Slider'
 import ColorBox from '../dumb/ColorBox'
 import SavedColors from './SavedColors'
 
-import { addSavedColor, changeHue } from '../../actions'
+import { addSavedColor, changeHue, changeLight } from '../../actions'
 
 @connect((store) => {
 	return {
 		hue: store.hue,
+		light: store.light,
 		colors: store.colors
 	};
 })
 export default class Layout extends React.Component {
 	changeHue(hue) {
 		this.props.dispatch(changeHue(hue));
+	}
+
+	changeLight(light) {
+		this.props.dispatch(changeLight(light));
 	}
 
 	onClickSave() {
@@ -35,11 +40,17 @@ export default class Layout extends React.Component {
 				<p>Move slider to change hue, click preview to save color, saved colors are shown along with some pre-defined examples</p>
 					
 				<Slider 
+					max="255"
 					changeValue={this.changeHue.bind(this)} 
-					hue={this.props.hue} />
+					value={this.props.hue} />
+				<Slider 
+					max="100"
+					changeValue={this.changeLight.bind(this)} 
+					value={this.props.light} />
 				
 				<ColorBox
 					onClick={this.onClickSave.bind(this)}
+					light={this.props.light}
 					hue={this.props.hue} /> 
 
 				<SavedColors />

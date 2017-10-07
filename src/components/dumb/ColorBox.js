@@ -4,7 +4,7 @@ var Color = require('color');
 
 export default class ColorBox extends React.Component {
 	render() {
-		const c = Color('hsl(' + this.props.hue + ', 100%, 50%)');
+		const c = Color('hsl(' + this.props.hue + ', 100%, ' + this.props.light + '%)');
 		
 		return (
 			<div

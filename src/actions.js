@@ -11,3 +11,10 @@ export function addSavedColor(val) {
 		data: val
 	};
 }
+
+export function changeLight(val) {
+	return {
+		type: "CHANGE_LIGHT",
+		data: val
+	};
+}
