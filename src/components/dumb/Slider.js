@@ -16,11 +16,11 @@ export default class Slider extends React.Component {
 					id="finder"
 					type="range" 
 					min="0"
-					max="255"
-					value={this.props.hue}
+					max={this.props.max}
+					value={this.props.value}
 					onChange={this.handleChange.bind(this)} /> 
 				<Shower 
-					toShow={this.props.hue} />
+					toShow={this.props.value} />
 			</div>
 		);
 	}
