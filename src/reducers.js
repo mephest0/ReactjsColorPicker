@@ -43,7 +43,11 @@ export default combineReducers({
 function getDefaultColors() {
 	let numbers = [];
 	for (let i = 0; i <= 255; i += 12)
+		numbers.push({"hue": i, "light": 30, "key": numbers.length});
+	for (let i = 0; i <= 255; i += 12)
 		numbers.push({"hue": i, "light": 50, "key": numbers.length});
+	for (let i = 0; i <= 255; i += 12)
+		numbers.push({"hue": i, "light": 70, "key": numbers.length});
 
 	return numbers;
 }
