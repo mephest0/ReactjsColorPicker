@@ -4,7 +4,6 @@ var Color = require('color');
 
 export default class SavedColor extends React.Component {
 	clickMe(e) {
-		console.log(this.props.hue);
 		this.props.changeValue(this.props.hue);
 	}
 

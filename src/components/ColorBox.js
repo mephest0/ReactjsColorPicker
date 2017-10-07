@@ -8,6 +8,7 @@ export default class ColorBox extends React.Component {
 		
 		return (
 			<div
+				onClick={this.props.onClick.bind(this)}
 				style={{backgroundColor: c, 
 					border: "2px solid black",
 					height: "50px", 

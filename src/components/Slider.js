@@ -13,6 +13,7 @@ export default class Slider extends React.Component {
 		return (
 			<div>
 				<input 
+					style={{ width: "400px" }}
 					id="finder"
 					type="range" 
 					min="0"
@@ -25,3 +26,4 @@ export default class Slider extends React.Component {
 		);
 	}
 }
+
