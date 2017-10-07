@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import SavedColor from '../dumb/SavedColor'
-import { changeHue } from '../../js/actions'
+import { changeHue } from '../../actions'
 
 @connect(store => {
 	return {

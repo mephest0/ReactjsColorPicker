@@ -5,7 +5,7 @@ import Slider from '../dumb/Slider'
 import ColorBox from '../dumb/ColorBox'
 import SavedColors from './SavedColors'
 
-import { addSavedColor, changeHue } from '../../js/actions'
+import { addSavedColor, changeHue } from '../../actions'
 
 @connect((store) => {
 	return {
