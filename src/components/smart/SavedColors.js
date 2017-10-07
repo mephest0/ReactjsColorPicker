@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import SavedColor from '../dumb/SavedColor'
-import { changeHue } from '../../actions'
+import { changeHue, changeLight } from '../../actions'
 
 @connect(store => {
 	return {
@@ -11,7 +11,8 @@ import { changeHue } from '../../actions'
 })
 export default class SavedColors extends React.Component {
 	clickedColor(val) {
-		this.props.dispatch(changeHue(val));
+		this.props.dispatch(changeHue(val.hue));
+		this.props.dispatch(changeLight(val.light));
 	}
 
 	render() {
@@ -19,6 +20,7 @@ export default class SavedColors extends React.Component {
 			color => <SavedColor 
 				key={color.key}
 				hue={color.hue} 
+				light={color.light}
 				changeValue={this.clickedColor.bind(this)} />);
 
 		return (

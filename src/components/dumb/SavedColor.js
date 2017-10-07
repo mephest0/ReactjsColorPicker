@@ -4,11 +4,11 @@ var Color = require('color');
 
 export default class SavedColor extends React.Component {
 	clickMe(e) {
-		this.props.changeValue(this.props.hue);
+		this.props.changeValue({ "hue": this.props.hue, "light": this.props.light});
 	}
 
 	render() {
-		const c = Color('hsl(' + this.props.hue + ', 100%, 50%)');
+		const c = Color('hsl(' + this.props.hue + ', 100%, ' + this.props.light + '%)');
 
 		return (
 			<div

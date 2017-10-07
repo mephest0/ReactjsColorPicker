@@ -11,6 +11,7 @@ const lightReducer = (state = 50, action) => {
 }
 
 const hueReducer = (state=0, action) => {
+	console.log(action);
 	switch (action.type) {
 		case "CHANGE_HUE": 
 			return action.data;
@@ -24,7 +25,8 @@ const colorsReducer = (state=getDefaultColors(), action) => {
 	switch (action.type) {
 		case "ADD_SAVED_COLOR":
 			return [...state, {
-				"hue": action.data,
+				"hue": action.data.hue,
+				"light": action.data.light,
 				"key": state.length
 			}];
 		default:
@@ -42,7 +44,7 @@ export default combineReducers({
 function getDefaultColors() {
 	let numbers = [];
 	for (let i = 0; i <= 255; i += 12)
-		numbers.push({"hue": i, "key": numbers.length});
+		numbers.push({"hue": i, "light": 50, "key": numbers.length});
 
 	return numbers;
 }

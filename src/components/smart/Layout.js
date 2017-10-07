@@ -24,7 +24,7 @@ export default class Layout extends React.Component {
 	}
 
 	onClickSave() {
-		this.props.dispatch(addSavedColor(this.props.hue));
+		this.props.dispatch(addSavedColor({ "hue": this.props.hue, "light": this.props.light}));
 	}
 
 	render() {				
@@ -37,13 +37,14 @@ export default class Layout extends React.Component {
 					}}>
 
 				<h1>&amp;nbsp;</h1>
-				<p>Move slider to change hue, click preview to save color, saved colors are shown along with some pre-defined examples</p>
+				<p>Move sliders to change hue and light, click preview to save color, saved colors are shown along with some pre-defined examples</p>
 					
-				<Slider 
+				Hue <Slider 
 					max="255"
 					changeValue={this.changeHue.bind(this)} 
 					value={this.props.hue} />
-				<Slider 
+
+				Light <Slider 
 					max="100"
 					changeValue={this.changeLight.bind(this)} 
 					value={this.props.light} />
