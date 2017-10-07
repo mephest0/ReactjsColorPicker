@@ -11,7 +11,6 @@ const lightReducer = (state = 50, action) => {
 }
 
 const hueReducer = (state=0, action) => {
-	console.log(action);
 	switch (action.type) {
 		case "CHANGE_HUE": 
 			return action.data;
