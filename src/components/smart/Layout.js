@@ -24,17 +24,19 @@ export default class Layout extends React.Component {
 	}
 
 	onClickSave() {
-		this.props.dispatch(addSavedColor({ "hue": this.props.hue, "light": this.props.light}));
+		this.props.dispatch(addSavedColor({ 
+			"hue": this.props.hue, 
+			"light": this.props.light}));
 	}
 
 	render() {				
 		return (
 			<div style={{
-						border: "3px solid black",
-						padding: "10px",
-						width: "600px",
-						background: "#ccc"
-					}}>
+					border: "3px solid black",
+					padding: "10px",
+					width: "600px",
+					background: "#ccc"
+				}}>
 
 				<h1>&amp;nbsp;</h1>
 				<p>Move sliders to change hue and light, click preview to save color, saved colors are shown along with some pre-defined examples</p>
